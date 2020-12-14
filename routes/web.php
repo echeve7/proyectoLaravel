@@ -14,3 +14,6 @@
 Route::get('/', 'UserController@index');
 Route::post('user', 'UserController@store')->name('users.store');
 Route::delete('user/{user}', 'UserController@destroy')->name('users.destroy');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
